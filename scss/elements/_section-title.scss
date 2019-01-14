@@ -1,0 +1,136 @@
+// Section title 
+
+.section-title {
+    position: absolute;
+    top: 27%;
+    left: 25%;
+    color: $color-white;
+    z-index: 4;
+
+    @include mediaXl {
+        left: 27%;
+    }
+
+    @include mediaLg {
+        top: 22%;
+    }
+
+    @include mediaMd {
+        top: 24%;
+        left: 27%;
+    }
+
+    @include mediaXs {
+        top: 6%;
+        left: 0%;
+    }
+
+    // DRIFTER TITLE
+    &--drifter {
+        left: 37%;
+
+        @include mediaXl {
+            left: 44%;
+        }
+
+        @include mediaXs {
+            top: 21%;
+            left: 4%;
+        }
+    }
+
+    // TITLE
+    &__title {
+        margin-bottom: 10px;
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 14px;
+        font-weight: 700;
+
+        @include mediaXl {
+            font-size: 24px;
+            letter-spacing: 8px;
+        }
+
+        @include mediaLg {
+            font-size: 20px;
+            letter-spacing: 6px;
+        }
+
+        @include mediaMd {
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        @include mediaXs {
+            text-align: center;
+        }
+
+        // DRIFTER TITLE
+        &--drifter {
+            letter-spacing: 12px;
+
+            @include mediaXl {
+                letter-spacing: 9px;
+            }
+
+            @include mediaLg {
+                letter-spacing: 4px;
+            }
+
+            @include mediaXs {
+                text-align: center;
+            }
+        }
+    }
+
+    // SUBTITLE
+    &__subtitle {
+        display: block;
+        width: 100%;
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 20px;
+
+        @include mediaXl {
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        @include mediaMd {
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        @include mediaXs {
+            text-align: center;
+        }
+
+        // DRIFTER SUBTITLE
+        &--drifter {
+            padding: 0 190px;
+            text-align: left;
+
+            @include mediaXl {
+                padding: 0 40px;
+                letter-spacing: 0;
+            }
+
+            @include mediaLg {
+                padding: 0;
+                letter-spacing: 0;
+            }
+
+            @include mediaMd {
+                padding: 0;
+                font-size: 12px;
+                letter-spacing: 0;
+            }
+
+            @include mediaXs {
+                text-align: center;
+            }
+        }
+    }
+
+}

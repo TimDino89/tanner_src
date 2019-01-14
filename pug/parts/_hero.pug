@@ -1,0 +1,33 @@
+//- Hero
+
+section.hero
+    .grid
+        .hero__wrapper
+            .hero__headline
+                span.hero__subtitle Designed for utility
+                h1.hero__title navy salt & pepper
+                .hero__arrow
+                    a(href="#").hero__text Gear UP
+                        svg.icon.hero__icon
+                            use(xlink:href="#angle-lg")
+            .hero__slider.wow.fadeInUpBig
+                .slider-nav.slider-nav__hero
+                    .slider-nav__angles.slider-nav__angles--line
+                        svg.icon.slider-nav__angle.slider-nav__angle--top
+                            use(xlink:href="#angle-lg")
+                        svg.icon.slider-nav__angle.slider-nav__angle--bottom
+                            use(xlink:href="#angle-lg")
+                        .slider-nav__line
+                    ul.slider-nav__list.slider-nav__list--hero
+                        li.slider-nav__item
+                            button.slider-nav__btn.slider-nav__btn--active 01
+                        li.slider-nav__item
+                            button.slider-nav__btn 02
+                        li.slider-nav__item
+                            button.slider-nav__btn 03
+                        li.slider-nav__item
+                            button.slider-nav__btn 04
+                        li.slider-nav__item
+                            button.slider-nav__btn 05
+            .hero__banner
+                img(src="img/hero-bg.jpg" alt="Big bag")

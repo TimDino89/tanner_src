@@ -1,0 +1,36 @@
+// Sandwich button
+
+.sandwich {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba($color-white, .1);
+    cursor: pointer;
+    z-index: 13;
+    @include easeOut;
+
+    @include mediaMd {
+        display: block;
+        top: 15px;
+        right: 25px;
+    }
+
+    @include mediaXs {
+        display: block;
+        top: 15px;
+        right: 19px;
+    }
+    
+    //  LINES
+    &__line {
+      display: block;
+      margin-bottom: 5px;
+      width: 28px;
+      height: 3px;
+      background: $color-white;
+      box-shadow: 0 0 2px $color-black;
+      border-radius: 5px;
+      @include easeOut;
+    }
+}

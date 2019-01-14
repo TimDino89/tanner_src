@@ -1,0 +1,259 @@
+// Slider
+
+.slider-nav {
+    text-align: center;
+
+    // HERO NAV
+    &__hero {
+        margin-top: 90px;
+        margin-left: 50px;
+        width: 100px;
+
+        @include mediaXl {
+            margin-left: 30px;
+        }
+
+        @include mediaMd {
+            margin-left: 20px;
+        }
+
+        @include mediaXs {
+            margin: 0;
+        }
+    }
+
+    // ANGLES
+    &__angles {
+        position: relative;
+        display: inline-block;
+
+        @include mediaXs {
+            transform: rotate(90deg);
+        }
+    }
+
+    // LINE
+    &__line {
+        margin: 15px auto;
+        height: 50px;
+        width: 4px;
+        background: $color-beige;
+
+        @include mediaXl {
+            height: 30px;
+            width: 2px;
+            margin: 5px auto;
+        }
+
+        @include mediaLg {
+            display: none;
+        }
+
+        @include mediaMd {
+            display: none;
+        }
+
+        @include mediaXs {
+            display: none;
+        }
+    }
+
+    // ANGLE
+    &__angle {
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        @include mediaXl {
+            height: 15px;
+            width: 15px;
+            margin: 15px auto;
+        }
+
+        @include mediaMd {
+            height: 10px;
+            width: 10px;
+            margin: 10px auto;
+        }
+
+        &--bottom {
+            transform: rotate(180deg);
+            fill: $color-beige;
+        }
+
+        &--left {
+            transform: rotate(-90deg);
+        }
+
+        &--right {
+            transform: rotate(90deg);
+        }
+    }
+
+    // LIST
+    &__list {
+        list-style: none;
+
+        &--hero {
+            @include mediaXs {
+                position: absolute;
+                bottom: -60px;
+                left: 15%;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        // DRIFTER NAVIGATION
+        &--drifter {
+            position: absolute;
+            bottom: -140px;
+            left: 35%;
+            display: flex;
+            align-items: center;
+
+            @include mediaXl {
+                bottom: -86px;
+                left: 110px;
+            }
+
+            @include mediaXl {
+                left: 90px;
+            }
+
+            @include mediaMd {
+                bottom: -58px;
+                left: 70px;
+            }
+
+            @include mediaXs {
+                left: 5%;
+            }
+
+            &::after {
+                position: absolute;
+                top: -10px;
+                left: 75px;
+                display: block;
+                content: '';
+                width: 2px;
+                height: 35px;
+                background: $color-gray;
+
+                @include mediaXl {
+                    left: 50px;
+                    height: 20px;
+                }
+
+                @include mediaMd {
+                    left: 33px;
+                    height: 15px;
+                }
+            }
+        }
+
+        // VOYAGER NAVIGATION
+        &--voyager {
+            position: absolute;
+            bottom: -140px;
+            left: 15%;
+            display: flex;
+            align-items: center;
+
+            @include mediaXl {
+                bottom: -86px;
+                left: 0%;
+            }
+
+            @include mediaLg {
+                left: -25px;
+            }
+
+            @include mediaMd {
+                bottom: -58px;
+                left: -30px;
+            }
+
+            @include mediaXs {
+                left: 2%;
+            }
+
+            &::after {
+                position: absolute;
+                top: -10px;
+                left: 195px;
+                display: block;
+                content: '';
+                width: 2px;
+                height: 35px;
+                background: $color-gray;
+
+                @include mediaXl {
+                    left: 155px;
+                    height: 20px;
+                }
+
+                @include mediaMd {
+                    left: 130px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+
+    // ITEM
+    &__item {
+       text-align: center;
+    }
+     
+    // BUTTON
+    &__btn {
+       padding: 5px;
+       margin: 0 10px;
+       border: none;
+       background: transparent;
+       font-size: 20px;
+       letter-spacing: 2px;
+       font-family: $font-montserrat;
+       font-weight: 700;
+       color: $color-gray;
+
+       &:hover {
+           color: $color-black;
+           @include easeOut;
+       }
+
+       @include mediaXl {
+        font-size: 14px;
+        }
+
+       @include mediaMd {
+        font-size: 12px;
+        }
+
+        // BUTTON ACTIVE
+       &--active {
+           margin: 25px 10px;
+           padding: 15px;
+           font-size: 40px;
+           font-weight: 400;
+           color: $color-black;
+           background: $color-white;
+           border-radius: 50%;
+           box-shadow: 0 20px 60px lighten($color-gray, 25%);
+
+           @include mediaXl {
+            margin: 10px;
+            font-size: 20px;
+            box-shadow: 0 10px 30px lighten($color-gray, 25%);
+            }
+
+           @include mediaMd {
+            margin: 5px;
+            padding: 10px;
+            font-size: 14px;
+            box-shadow: 0 5px 20px lighten($color-gray, 25%);
+            }
+        }
+    }
+}

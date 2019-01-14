@@ -1,0 +1,217 @@
+// Nomad
+
+.nomad {
+
+    // WRAPPER
+    &__wrapper {
+        position: relative;
+        display: flex;
+        padding: 0 80px;
+        align-items: center;
+
+        @include mediaLg {
+            padding: 0;
+        }
+
+        @include mediaMd {
+            padding: 0;
+        }
+
+        @include mediaXs {
+            flex-wrap: wrap;
+            padding: 0;
+        }
+    }
+
+    // BANNER
+    &__banner {
+        @include mediaXs {
+            width: 100%;
+        }
+    }
+
+    // TEXT
+    &__text {
+        position: relative;
+        padding: 0 50px;
+
+        @include mediaXl {
+            padding: 0 20px;
+        }
+
+        @include mediaXs {
+            width: 100%;
+        }
+    }
+
+    // TITLE
+    &__title {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 10px;
+
+        @include mediaXl {
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+
+        @include mediaLg {
+            margin-bottom: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        @include mediaMd {
+            margin-bottom: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+    }
+
+    // DESCRIPTION
+    &__description {
+        width: 500px;
+        line-height: 30px;
+
+        @include mediaXl {
+            width: 100%;
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        @include mediaLg {
+            width: 100%;
+            line-height: 14px;
+            font-size: 12px;
+        }
+
+        @include mediaMd {
+            width: 100%;
+            line-height: 14px;
+            font-size: 12px;
+        }
+    }
+
+    // LINK
+    &__link {
+        position: relative;
+        display: block;
+        margin-bottom: 100px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        color: $color-black;
+
+        @include mediaXl {
+            margin-bottom: 50px;
+            font-size: 14px;
+        }
+
+        @include mediaLg {
+            margin-bottom: 30px;
+        }
+
+        @include mediaMd {
+            margin-bottom: 30px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 2px;
+            background: $color-black;
+        }
+
+        &::before {
+            top: -200px;
+            height: 70px;
+
+            @include mediaXl {
+                height: 50px;
+                width: 1px;
+                top: -180px;
+            }
+
+            @include mediaLg {
+                top: -145px;
+            }
+
+            @include mediaMd {
+                top: -165px;
+            }
+
+            @include mediaXs {
+                display: none;
+            }
+        }
+
+        &::after {
+            bottom: -320px;
+            height: 220px;
+            z-index: 2;
+
+            @include mediaXl {
+                width: 1px;
+                height: 130px;
+                bottom: -180px;
+            }
+
+            @include mediaLg {
+                height: 170px;
+                bottom: -200px;
+            }
+
+            @include mediaMd {
+                height: 100px;
+                bottom: -130px;
+            }
+
+            @include mediaXs {
+                display: none;
+            }
+        }
+    }
+
+    // ICON
+    &__icon {
+        width: 30px;
+        height: 30px;
+
+        @include mediaXl {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    // LOGO
+    &__logo {
+        width: 300px;
+        padding: 0 20px;
+
+        @include mediaXl {
+            width: 200px;
+        }
+
+        @include mediaLg {
+            width: 150px;
+            padding: 0 10px;
+        }
+
+        @include mediaMd {
+            width: 150px;
+            padding: 0 10px;
+        }
+
+        @include mediaXs {
+            display: none;
+        }
+    }
+}

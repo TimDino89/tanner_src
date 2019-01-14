@@ -1,0 +1,87 @@
+// Navigation
+
+.nav {
+    margin-left: 60px;
+    padding: 40px 0;
+
+    @include mediaMd {
+        display: none;
+    }
+
+    @include mediaXs {
+        display: none;
+    }
+
+    // LIST
+    &__list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+
+    // ITEM
+    &__item {
+        position: relative;
+        margin: 0 40px;
+
+        &--active {
+            &::before,
+            &::after {
+                @include line;
+            }
+
+            &::before {
+                @include line;
+                left: -60px;
+
+                @include mediaXl {
+                    left: -40px;
+                    width: 30px;
+                }
+            }
+
+            &::after {
+                width: 5px;
+                height: 5px;
+                right: -15px;
+                border-radius: 50%;
+
+                @include mediaXl {
+                    height: 4px;
+                    width: 4px;
+                    right: -12px;
+                }
+            }
+        }
+
+        @include mediaXl {
+            margin: 0 20px;
+        }
+    }
+
+    // LINK
+    &__link {
+        text-transform: uppercase;
+        font-family: $font-muller;
+        line-height: 30px;
+        letter-spacing: 1px;
+        font-size: 16px;
+        text-decoration: none;
+        color: $color-black;
+        @include easeOut;
+
+        &--white {
+            color: $color-white;
+            text-shadow: 0 0 1px $color-black;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include mediaXl {
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}

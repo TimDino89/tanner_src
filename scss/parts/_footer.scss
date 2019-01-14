@@ -1,0 +1,452 @@
+// Footer
+
+.footer {
+    height: 200px;
+    
+    // WRAPPER
+    &__wrapper {
+        display: flex;
+        padding: 40px 120px;
+        background: $color-white--dark;
+
+        @include mediaXl {
+            padding: 40px;
+        }
+
+        @include mediaLg {
+            flex-wrap: wrap;
+            padding: 20px 40px 60px;
+        }
+
+        @include mediaMd {
+            flex-wrap: wrap;
+            padding: 20px 40px 60px;
+        }
+
+        @include mediaXs {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            padding: 50px 20px;
+        }
+    }
+
+    // COPYRIGHT
+    &__copyright {
+        width: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    
+        @include mediaLg {
+            align-content: space-around;
+        }
+
+        @include mediaMd {
+            align-content: space-around;
+        }
+
+        @include mediaXs {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    // LOGO
+    &__logo {
+        padding-top: 10px;
+        width: 50%;
+
+        @include mediaXl {
+            padding-top: 25px;
+        }
+
+        @include mediaLg {
+            width: 100%;
+            padding-right: 20px;
+        }
+
+        @include mediaMd {
+            width: 100%;
+            padding-right: 20px;
+        }
+
+        @include mediaXs {
+            width: 100%;
+            padding: 20px 50px;
+        }
+    }
+
+    // COMPANY
+    &__company {
+        width: 100%;
+        font-family: $font-roboto;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        @include mediaXl {
+            font-size: 12px;
+        }
+    }
+
+    // SITEMAP
+    &__sitemap {
+        width: 40%;
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+
+        @include mediaLg {
+            justify-content: center;
+            align-content: flex-start;
+            flex-grow: 1;
+        }
+
+        @include mediaMd {
+            justify-content: center;
+            align-content: flex-start;
+            flex-grow: 1;
+        }
+
+        @include mediaXs {
+            width: 100%;
+        }
+    }
+
+    // NAVIGATION
+    &__nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+
+        &--margin {
+            margin-bottom: 120px;
+
+            @include mediaXl {
+                margin-bottom: 100px;
+            }
+
+            @include mediaLg {
+                padding-left: 70px;
+                margin-bottom: 0;
+            }
+
+            @include mediaMd {
+                margin-bottom: 0;
+            }
+
+            @include mediaXs {
+                margin-bottom: 30px;
+            }
+        }
+
+        @include mediaLg {
+            width: 50%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        @include mediaMd {
+            width: 50%;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        @include mediaXs {
+            width: 50%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: center;
+        }
+    }
+
+    // ITEM
+    &__item {
+        position: relative;
+        margin: 0 40px;
+
+        @include mediaXl {
+            margin: 0;
+            margin-left: 50px;
+        }
+
+        &--active {
+            color: $color-black;
+
+            &::before,
+            &::after {
+                @include line;
+
+                @include mediaLg {
+                    display: none;
+                }
+
+                @include mediaMd {
+                    display: none;
+                }
+
+                @include mediaXs {
+                    display: none;
+                }
+            }
+
+            &::before {
+                @include line;
+                left: -60px;
+
+                @include mediaXl {
+                    width: 15px;
+                    left: -25px;
+                }
+
+                @include mediaLg {
+                    display: none;
+                }
+
+                @include mediaMd {
+                    display: none;
+                }
+
+                @include mediaXs {
+                    display: none;
+                }
+            }
+
+            &::after {
+                width: 5px;
+                height: 5px;
+                right: -15px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    // LINK
+    &__link {
+        text-transform: uppercase;
+        font-family: $font-muller;
+        line-height: 30px;
+        letter-spacing: 1px;
+        font-size: 16px;
+        text-decoration: none;
+        color: $color-gray;
+        @include easeOut;
+
+        &:hover {
+            text-decoration: underline;
+            color: $color-black;
+        }
+
+        // LINK SOCIAL
+        &--social {
+            text-transform: lowercase;
+            font-size: 16px;
+
+            @include mediaXs {
+                text-transform: uppercase;
+                color: $color-beige;
+            }
+        }
+
+        @include mediaXl {
+            font-size: 12px;
+        }
+
+        @include mediaLg {
+            text-transform: uppercase;
+            color: $color-beige;
+            font-size: 12px;
+        }
+
+        @include mediaMd {
+            text-transform: uppercase;
+            color: $color-beige;
+            font-size: 12px;
+        }
+
+        @include mediaXs {
+            font-size: 14px;
+        }
+
+        // LINK ACTIVE
+        &--active {
+            color: $color-black;
+            font-weight: 300;
+        }
+    }
+
+    // ADRESS
+    &__adress {
+        width: 20%;
+        padding: 30px 50px;
+
+        @include mediaXl {
+            text-align: right;
+            padding: 30px 20px; 
+        }
+
+        @include mediaLg {
+            padding: 50px 5px;
+        }
+
+        @include mediaMd {
+            padding: 50px 5px;
+        }
+
+        @include mediaXs {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    // CITY
+    &__city {
+        display: block;
+        width: 100%;
+        font-family: $font-roboto;
+        font-weight: 300;
+
+        @include mediaXl {
+            font-size: 12px;
+        }
+
+        @include mediaXs {
+            font-size: 14px;
+        }
+
+        &--black {
+            text-transform: uppercase;
+            color: $color-black;
+            font-weight: 700;
+            font-size: 20px;
+
+            @include mediaXl {
+                font-size: 12px;
+            }
+
+            @include mediaXs {
+                font-size: 20px;
+            }
+        }
+    }
+
+    // SUBSCRIBE
+    &__subscribe {
+        padding-top: 30px;
+
+        @include mediaXl{
+            padding-left: 20px;
+        }
+
+        @include mediaLg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        @include mediaMd {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        @include mediaXs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // TITLE
+    &__title {
+        position: relative;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+
+        @include mediaXl {
+            font-size: 16px;
+        }
+
+        @include mediaLg {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        @include mediaMd {
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        @include mediaXs {
+            margin: 10px 0;
+        }
+    }
+
+    // DESCRIPTION
+    &__description {
+        margin-bottom: 15px;
+        width: 350px;
+        font-size: 14px;
+
+        @include mediaXl {
+            font-size: 12px;
+        }
+
+        @include mediaLg {
+            text-align: center;
+        }
+
+        @include mediaMd {
+            text-align: center;
+        }
+
+        @include mediaXs {
+            width: 80%;
+            margin: 10px auto 20px;
+
+        }
+    }
+
+    // INPUT
+    &__input {
+        width: 250px;
+        padding: 10px 15px;
+
+        @include mediaLg {
+            width: 400px;
+        }
+
+        @include mediaMd {
+            width: 400px;
+        }
+
+        @include mediaXs {
+            width: 75%;
+        }
+    }
+
+    // BTN
+    &__btn {
+        margin-left: 5px;
+        padding: 10px 15px;
+        background: $color-black;
+        border: 2px solid $color-black;
+    }
+
+    // ICON
+    &__icon {
+        width: 15px;
+        height: 15px;
+        fill: $color-white;
+        transform: rotate(90deg);
+    }
+}

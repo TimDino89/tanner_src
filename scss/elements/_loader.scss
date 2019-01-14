@@ -1,0 +1,60 @@
+// Loader
+
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background: $color-gray--dark;
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s;
+    z-index: 100;
+
+    &__scale {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 500px;
+        height: 10px;
+        border: 1px solid $color-beige--light;
+        border-radius: 5px;
+        @include centered;
+
+        @include mediaXs {
+            width: 200px;
+        }
+    }
+
+    &__fill {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        border-radius: 5px 0 0 5px;
+        background-color: $color-yellow;
+    }
+
+    &__perc {
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        display: block;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 300;
+        color: $color-white;
+        @include centered;
+
+        @include mediaXs {
+            width: 200px;
+            font-size: 40px;
+        }
+    }
+}
+
+.done {
+    visibility: hidden;
+    opacity: 0;
+}

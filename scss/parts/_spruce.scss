@@ -1,0 +1,211 @@
+// Spruce
+
+.spruce {
+
+    // WRAPPER
+    &__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mediaLg {
+            padding-bottom: 50px;
+        }
+
+        @include mediaMd {
+            padding-bottom: 50px;
+        }
+
+        @include mediaXs {
+            flex-wrap: wrap;
+        }
+    }
+
+    // BANNER
+    &__banner {
+        position: relative;
+        top: -150px;
+        left: -30px;
+        width: 40%;
+        padding-right: 100px;
+
+        @include mediaXl {
+            top: -100px;
+            left: 0;
+            padding-right: 0;
+        }
+
+        @include mediaLg {
+            top: -60px;
+        }
+
+        @include mediaMd {
+            top: -60px;
+        }
+
+        @include mediaXs {
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    // TEXT
+    &__text {
+        position: relative;
+        width: 60%;
+        padding-left: 400px;
+
+        @include mediaXl {
+            width: 60%;
+            padding-left: 300px;
+        }
+
+        @include mediaLg {
+            padding-left: 180px;
+        }
+
+        @include mediaMd {
+            width: 60%;
+            padding-left: 130px;
+        }
+
+        @include mediaXs {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    // TITLE
+    &__title {
+        position: absolute;
+        top: -60px;
+        left: 30%;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 10px;
+
+        @include mediaXl {
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+
+        @include mediaLg {
+            letter-spacing: 2px;
+        }
+
+        @include mediaMd {
+            letter-spacing: 2px;
+        }
+
+        @include mediaXs {
+            width: 100%;
+            margin: 0 auto 40px;
+            padding: 0 10px;
+            position: relative;
+            top: 0;
+            left: 0;
+            text-align: center;
+            font-size: 17px;
+            letter-spacing: 2px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -250px;
+            left: 10px;
+            display: block;
+            width: 2px;
+            height: 240px;
+            background: $color-black;
+
+            @include mediaXl {
+                top: -115px;
+                left: 6px;
+                width: 1px;
+                height: 110px;
+            }
+
+            @include mediaLg {
+                top: -105px;
+                left: 6px;
+                width: 1px;
+                height: 100px;
+            }
+
+            @include mediaMd {
+                top: -65px;
+                left: 6px;
+                width: 1px;
+                height: 60px;
+            }
+
+            @include mediaXs {
+                transform: rotate(90deg);
+                top: -400%;
+                left: 47%;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 40%;
+            left: -5%;
+            display: block;
+            width: 110%;
+            height: 100%;
+            background: $color-beige--light;
+            z-index: -1;
+        }
+    }
+
+    // DESCRIPTION
+    &__description {
+        width: 500px;
+        line-height: 30px;
+        font-family: $font-roboto;
+        font-weight: 300;
+        font-size: 18px;
+        letter-spacing: 1px;
+
+        @include mediaXl {
+            width: 300px;
+            font-size: 12px;
+            letter-spacing: 0;
+            line-height: 14px;
+        }
+    }
+
+    // LINK
+    &__link {
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        color: $color-black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include mediaMd {
+            font-size: 12px;
+        }
+    }
+
+    // ICON
+    &__icon {
+        width: 30px;
+        height: 30px;
+
+        @include mediaXl {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

@@ -1,0 +1,157 @@
+// Field
+
+.field {
+
+    // WRAPPER
+    &__wrapper {
+        position: relative;
+        top: -100px;
+        display: flex;
+        justify-content: flex-end;
+
+        @include mediaXl {
+            top: -70px;
+        }
+
+        @include mediaXs {
+           flex-wrap: wrap;
+        }
+    }
+
+    // BANNER
+    &__banner {
+        width: 60%;
+        padding-right: 360px;
+
+        @include mediaXl {
+            padding-right: 0;
+            padding-left: 150px;
+        }
+
+        @include mediaLg {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        @include mediaMd {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        @include mediaXs {
+            width: 100%;
+            padding: 0;
+            margin-top: 120px;
+        }
+    }
+
+    // TEXT
+    &__text {
+        position: relative;
+        padding: 80px 80px 0 0;
+
+        @include mediaXl {
+            width: 40%;
+            padding: 80px 0 0 80px;
+        }
+
+        @include mediaLg {
+            width: 40%;
+            padding: 100px 0 0 0px;
+        }
+
+        @include mediaMd {
+            width: 40%;
+            padding: 60px 0 0 20px;
+        }
+
+        @include mediaXs {
+            padding: 20px;
+            width: 100%;
+        }
+    }
+
+    // TITLE
+    &__title {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 10px;
+
+        @include mediaXl {
+            font-size: 20px;
+            letter-spacing: 5px;
+        }
+
+        @include mediaLg {
+            margin-bottom: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+        @include mediaMd {
+            margin-bottom: 10px;
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+    }
+
+    // DESCRIPTION
+    &__description {
+        width: 500px;
+        line-height: 30px;
+
+        @include mediaXl {
+            width: 400px;
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        @include mediaLg {
+            width: 100%;
+            line-height: 14px;
+            font-size: 12px;
+        }
+
+        @include mediaMd {
+            width: 100%;
+            line-height: 14px;
+            font-size: 12px;
+        }
+
+        @include mediaXs {
+            width: 100%;
+        }
+    }
+
+    // LINK
+    &__link {
+        position: relative;
+        display: block;
+        margin-bottom: 100px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        color: $color-black;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include mediaXl {
+            font-size: 14px;
+        }
+    }
+
+    // ICON
+    &__icon {
+        width: 30px;
+        height: 30px;
+
+        @include mediaXl {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

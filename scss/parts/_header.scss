@@ -1,0 +1,14 @@
+// Header 
+
+.header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 2;
+
+    // WRAPPER
+    &__wrapper {
+        margin-right: 5px;
+        display: flex;
+    }
+}

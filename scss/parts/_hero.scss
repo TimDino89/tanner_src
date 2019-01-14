@@ -1,0 +1,199 @@
+// Hero
+
+.hero {
+
+    // WRAPPER
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include mediaXl {
+            align-items: flex-start;
+        }
+
+        @include mediaXs {
+            flex-wrap: wrap;
+        }
+    }
+
+    // HEADLINE
+    &__headline {
+        position: absolute;
+        top: 45%;
+        left: 325px;
+        width: 1000px;
+        font-family: $font-montserrat;
+
+        @include mediaXl {
+            top: 45%;
+            left: 229px;
+        }
+
+        @include mediaMd {
+            top: 43%;
+            left: 159px;
+        }
+
+        @include mediaXs {
+            left: 0;
+            width: 100%;
+            text-align: center;
+            top: 29%;
+        }
+    }
+
+    // TITLE
+    &__title {
+        font-size: 50px;
+        text-transform: uppercase;
+        letter-spacing: 12px;
+        font-weight: 700;
+
+        @include mediaXl {
+            margin-top: 10px;
+            font-size: 34px;
+            line-height: 30px;
+            letter-spacing: 3px;
+        }
+
+        @include mediaLg {
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        @include mediaMd {
+            margin-top: 5px;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: 2px;
+        }
+
+        @include mediaXs {
+            font-size: 20px;
+            color: $color-white;
+            letter-spacing: 1px;
+            text-shadow: 0 0 1px $color-black;
+        }
+    }
+
+    // SUBTITLE
+    &__subtitle {
+        margin-bottom: 10px;
+        font-size: 20px;
+
+        @include mediaXl {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include mediaMd {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @include mediaXs {
+            color: $color-white;
+            text-shadow: 0 0 2px $color-black;
+        }
+    }
+
+    // ARROW
+    &__arrow {
+        margin-top: 120px;
+
+        @include mediaXl {
+            margin-top: 80px;
+        }
+
+        @include mediaLg {
+            margin-left: -60px;
+            margin-top: 80px;
+        }
+
+        @include mediaMd {
+            margin-left: -40px;
+            margin-top: 50px;
+        }
+
+        @include mediaXs {
+            margin-top: 4.5rem;
+            margin-left: 10rem;
+        }
+    }
+
+    // TEXT
+    &__text {
+        display: inline-block;
+        position: relative;
+        margin-left: 180px;
+        font-size: 20px;
+        color: $color-beige;
+        text-decoration: none;
+        cursor: pointer;
+
+        &::before {
+            @include line;
+            top: 50%;
+            left: -65px;
+
+            @include mediaLg {
+                display: none;
+            }
+
+            @include mediaMd {
+                display: none;
+            }
+        }
+
+        @include mediaXl {
+            margin-left: 45px;
+            font-size: 18px;
+        }
+
+        @include mediaMd {
+            margin-left: 45px;
+            font-size: 14px;
+        }
+
+        @include mediaXs {
+            margin-top: 20px;
+        }
+    }
+
+    // ICON
+    &__icon {
+        margin-left: 10px;
+        width: 15px;
+        height: 15px;
+        transform: rotate(90deg);
+        fill: $color-beige;
+
+        @include mediaXl {
+            width: 10px;
+            height: 10px;
+        }
+    }
+    
+    // SLIDER
+    &__slider {
+        position: relative;
+        width: 33.33%;
+        height: 100%;
+        
+        @include mediaXs {
+            order: 2;
+        }
+    }
+
+    // BANNER
+    &__banner {
+        width: calc(100% - 33.33%);
+        font-size: 0;
+
+        @include mediaXs {
+            width: 100%;
+            order: 1;
+        }
+    }
+}

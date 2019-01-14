@@ -1,0 +1,101 @@
+// Daypack
+
+.daypack {
+
+    // WRAPPER
+    &__wrapper {
+        display: flex;
+
+        @include mediaXs {
+            flex-wrap: wrap;
+        }
+    }
+
+    // TEXT
+    &__text {
+        position: relative;
+        width: 45%;
+
+        @include mediaXl {
+            width: 55%;
+        }
+
+        @include mediaXs {
+            width: 100%;
+        }
+    }
+
+    // TITLE
+    &__title {
+        text-transform: uppercase;
+        position: absolute;
+        top: 40px;
+        left: 46%;
+        font-size: 70px;
+        font-weight: 700;
+        letter-spacing: 20px;
+        color: $color-white;
+        text-shadow: -3px 14px 20px $color-gray--light;
+
+        span {
+            display: block;
+        }
+
+        @include mediaXl {
+            top: -10px;
+            left: 46%;
+            font-size: 60px;
+            letter-spacing: 10px;
+        }
+
+        @include mediaLg {
+            top: -50px;
+            left: 41%;
+            font-size: 50px;
+            letter-spacing: 10px;
+        }
+
+        @include mediaMd {
+            top: -80px;
+            left: 20%;
+            font-size: 50px;
+            letter-spacing: 10px;
+        }
+
+        @include mediaXs {
+            left: 21%;
+            font-size: 30px;
+        }
+    }
+
+    // BANNER
+    &__banner {
+        position: relative;
+        top: -240px;
+        width: 55%;
+        padding-right: 120px;
+        z-index: -1;
+
+        @include mediaXl {
+            width: 45%;
+            top: -120px;
+            padding-right: 0;
+        }
+
+        @include mediaLg {
+            width: 45%;
+            top: -120px;
+            padding-right: 0;
+        }
+
+        @include mediaMd {
+            width: 55%;
+            top: -150px;
+        }
+
+        @include mediaXs {
+            padding: 20px;
+            width: 100%;
+        }
+    }
+}

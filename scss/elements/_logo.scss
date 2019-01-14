@@ -1,0 +1,65 @@
+// Logo
+
+.logo {
+    display: block;
+    position: relative;
+    padding: 25px 0;
+    margin-left: 40px;
+    width: 10%;
+
+    @include mediaXs {
+        width: 20%;
+        margin-left: 10px;
+    }
+
+    // IMAGE
+    &__img {
+        display: block;
+        width: 120px;
+        position: relative;
+        z-index: 2;
+
+        @include mediaXl {
+            width: 80px;
+        }
+
+        @include mediaMd {
+            width: 60px;
+        }
+    }
+
+    // BACKGROUND
+    &__bg {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -44px;
+        left: -19px;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: $color-beige;
+        z-index: 1;
+
+        @include mediaXl {
+            width: 120px;
+            height: 120px;
+            top: -34px;
+            left: -18px;
+        }
+
+        @include mediaMd {
+            width: 100px;
+            height: 100px;
+            top: -24px;
+        }
+
+        @include mediaXs {
+            top: -15%;
+            left: -17%;
+            width: 100px;
+            height: 100px;
+            background: rgba($color-beige, .5);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+// Fonts
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerExtraBold.woff2') format('woff2'),
+        url('../fonts/MullerExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+        url('../fonts/MyriadPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

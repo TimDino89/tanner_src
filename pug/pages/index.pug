@@ -1,0 +1,53 @@
+doctype html
+
+html(lang="en")
+
+  head
+    // Site Title
+    title Tanner
+
+    // Favicon
+    link(rel="apple-touch-icon", sizes="180x180", href="img/favicon/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="img/favicon/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16x16.png")
+    link(rel="manifest", href="img/favicon/site.webmanifest")
+    link(rel="mask-icon", href="img/favicon/safari-pinned-tab.svg", color="#5bbad5")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="theme-color", content="#ffffff")
+
+    // Meta
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(charset="utf-8")
+
+    // Stylesheets
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300" rel="stylesheet")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css")
+    link(rel="stylesheet" href="css/style.min.css")
+
+  body
+
+    include ../parts/_preloader
+
+    include ../parts/_header
+    include ../parts/_hero
+
+
+    include ../parts/_voyager
+    include ../parts/_drifter
+    
+    include ../parts/_main
+
+    include ../parts/_footer  
+
+    
+
+    include ../elements/_sprites
+
+// Javascript
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
+script(src="js/main.min.js")    

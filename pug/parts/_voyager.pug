@@ -1,0 +1,48 @@
+//- Voyager
+
+section.voyager
+    .grid
+        .voyager__wrapper
+            .section-title.wow.slideInLeft
+                h3.section-title__title voyager daypack
+                span.section-title__subtitle navy salt & pepper 
+            .voyager__banner
+                img(src="img/voyage-pack.jpg")
+            .voyager__text 
+                p.voyager__desc.wow.slideInRight Whether you’re stomping around outdoors 
+                                | or traversing the city, our Voyager Daypack 
+                                | was designed to be adaptable 
+                                | in all environments. Compact, lightweight 
+                                | and a comfortable for people of all sizes.
+                svg.icon.voyager__arrow
+                    use(xlink:href="#arrow")
+            .slider
+                .slider__wrapper
+                    .slider__item
+                        img(src="img/pack1.jpg" alt="Pack")
+                    .slider__item
+                        img(src="img/pack2.jpg" alt="Pack")
+                    .slider__item.slider__item--active.wow.fadeInUp
+                        img(src="img/voyagBackLg.png" alt="Pack").slider__img
+                        span.slider__price $300.00
+                        a(href="#").slider__buy
+                            .slider__text buy
+                            svg.icon.slider__arrow
+                                use(xlink:href="#arrow_buy")
+                        ul.slider-nav__list.slider-nav__list--voyager
+                            li.slider-nav__item
+                                button.slider-nav__btn 01
+                            li.slider-nav__item
+                                button.slider-nav__btn 02
+                            svg.icon.slider-nav__angle.slider-nav__angle--left
+                                use(xlink:href="#angle-lg")
+                            li.slider-nav__item
+                                button.slider-nav__btn.slider-nav__btn--active 03
+                            svg.icon.slider-nav__angle.slider-nav__angle--right
+                                use(xlink:href="#angle-lg")
+                            li.slider-nav__item
+                                button.slider-nav__btn 04
+                            li.slider-nav__item
+                                button.slider-nav__btn 05
+                    .slider__item
+                        img(src="img/pack4.jpg" alt="Pack")        
